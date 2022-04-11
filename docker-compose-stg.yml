@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  truc-vimc-fe-stg:
+    container_name: truc-vimc-fe-stg
+    image: images.fafu.com.vn:5000/truc-vimc-fe-stg
+    restart: always
+    networks:
+      - vimc-net
+    ports:
+      - '4085:80'
+networks:
+  vimc-net:
+    external: true
