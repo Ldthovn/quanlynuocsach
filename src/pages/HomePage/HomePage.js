@@ -3,7 +3,6 @@ import { inject, observer } from 'mobx-react'
 import { Helmet } from 'react-helmet/es/Helmet'
 
 const HomePage = props => {
-
   const { commonStore } = props
 
   useEffect(() => {
@@ -15,11 +14,18 @@ const HomePage = props => {
       <Helmet>
         <title>Trang chủ | Quản lý nước sạch</title>
       </Helmet>
-      <div>Trang chủ</div>
+      <h1
+        style={{
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: '56px'
+        }}>
+        Trang chủ
+      </h1>
     </>
   )
 }
 
-export default inject(
-  'commonStore',
-)(observer(HomePage))
+export default inject('commonStore')(observer(HomePage))

@@ -23,13 +23,13 @@ const UserGroupPage = props => {
   }
 
   useEffect(() => {
-    commonStore.setPageName(['/manage/user-group'])
+    commonStore.setPageName(['/household'])
   }, [])
 
   return (
     <>
-      <Helmet><title>Danh sách hộ gia đình | Quản lý nước sạch</title></Helmet>
-      <PageHeading title={'Danh sách hộ gia đình'}>
+      <Helmet><title>Danh sách hộ dân | Quản lý nước sạch</title></Helmet>
+      <PageHeading title={'Danh sách hộ dân'}>
         <Button type={'primary'} onClick={showAddUserGroupModal}>
           <PlusCircleOutlined />
           Tạo nhóm người dùng mới

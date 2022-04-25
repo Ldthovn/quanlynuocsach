@@ -95,12 +95,9 @@ const App = () => {
             <Switch>
               <Route exact path={'/auth/:authType'} component={AuthModule} />
               <ProtectedRoute
-                path={[
-                  '/',
-                  '/connected-document/manage/:manageType',
-                  '/manage/user-group',
-                ]}
-                exact component={ProtectedModule}
+                path={['/', '/accounts', '/accounts/:accountId', '/household']}
+                exact
+                component={ProtectedModule}
               />
               <DashboardAuthLayout>
                 <Route exact path={'/my-profile'} component={MyProfilePage} />
